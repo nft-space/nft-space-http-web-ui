@@ -1,0 +1,73 @@
+.details--owner-bar--container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details--owner-bar--follow-container{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details--owner-bar--follow-container>img{
+    width: 100%;
+    height: 100%;
+}
+
+.details--owner-bar--profile-photo-container{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details--owner-bar--profile-photo-container>img{
+    width: 100%;
+    height: 100%;
+}
+
+.details--owner-bar--container>p{
+    margin-bottom: 0px;
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    background: -webkit-linear-gradient(left, #7A1A7B , #864CFD);
+    background: -o-linear-gradient(right, #7A1A7B, #864CFD);
+    background: -moz-linear-gradient(right, #7A1A7B, #864CFD);
+    background: linear-gradient(to right, #7A1A7B , #864CFD); 
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+
+}
+
+.details--owner-bar--container>*{
+    margin: 0px 1em 0px 0px;
+}
+
+.address-container{
+    width: 125px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: #FFFFFF;
+    /* FONTS */
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: #000000;
+    padding: 1em 2em;
+
+
+}

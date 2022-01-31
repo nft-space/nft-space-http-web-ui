@@ -1,0 +1,113 @@
+<div class="details--content--wrapper">
+    <!-- Photo -->
+    <div class="details--content--photo-details-wrapper">
+        <div class="details--content--photo-container">
+            <img 
+                src="{{ url_for('static', filename='/png/details__photo_nft.png') }}" 
+                alt="nft space astro man for details page"
+            >
+        </div>
+        <div class="details--content--caption-container">
+            <p>Currently Owned By: </p>
+            {% include 'details/owner-bar.html' %}
+        </div>
+    </div>
+
+    <!-- Bio -->
+    <div class="details--content--nft-details-wrapper">
+        <div class="details--content--nft-details-wrapper">
+            <!-- TITLE (+interactions)  -->
+            <div class="details--content--title-container">
+                <p>Astro #001</p>
+                <div class="details--content--interactions-container">
+                    <!-- Viewed  -->
+                    <div class="details--content--interactions-item">
+                        <img 
+                            src="{{ url_for('static', filename='/png/interactions__viewed.png') }}"
+                            alt="interaction viewed"
+                        >
+                        <span>43k</span>
+                    </div>
+                    <!-- Liked -->
+                    <div class="details--content--interactions-item">
+                        <img 
+                            class="heart-inactive"
+                            src="{{ url_for('static', filename='/png/interactions__heart.png') }}"
+                            alt="interaction heart"
+                        >
+                        <span>43k</span>
+                    </div>
+                    <!-- Bookmarked -->
+                    <div class="details--content--interactions-item">
+                        <img 
+                            class="bookmark-inactive"
+                            src="{{ url_for('static', filename='/png/interactions__bookmark.png') }}"
+                            alt="interaction bookmark"
+                        >  
+                        <span>2k</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAGS -->
+            <div class="details--content--tags-container">
+                <div class="details--content--tags-item">
+                    #tagsplacedinhere
+                </div>
+                <div class="details--content--tags-item">
+                    #tags
+                </div>
+                <div class="details--content--tags-item">
+                    #tagsplace
+                </div>
+
+            </div>
+
+            <!-- FOLLOW BAR -->
+            {% include 'details/follow-bar.html' %}
+
+            <!-- DESCRIPTION -->
+            <div class="details--content--description-container">
+                <h1>Description </h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ametconsectetur adipisicing elit. </p>
+            </div>
+
+            <!-- DETAILS -->
+            <div class="details--content--details-container">
+                <h1>Details </h1>
+                <div class="details--content--details-item">
+                    <p>Token ID</p> <h3>4477</h3>
+                </div>
+                <div class="details--content--details-item">
+                    <p>Token Standard</p> <h3>ERC-721</h3>
+                </div>
+                <div class="details--content--details-item">
+                    <p>Blockchain</p> <h3>Algorand</h3>
+                </div>
+            </div>
+
+            <!-- BUY CONTAINER -->
+            <div class="details--content--buy-container">
+                <div class="details--content--buy-info-wrapper">
+                    <img 
+                        src="{{ url_for('static', filename='/png/rand_gallery_logo.png') }}" 
+                        alt="rand gallery logo "
+                    >
+                    <p> 
+                        75 
+                        <img 
+                            src="{{ url_for('static', filename='/png/algorand_algo_logo.png') }}" 
+                            alt="algorand algo picture "
+                            height="15px" width="15px"
+                        >
+                    </p>
+                </div>
+                <button type="button" class="details--content--buy-button">
+                    Buy
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+</div>

@@ -12,4 +12,6 @@ def create_app():
         app.register_blueprint(discover)
         from app.views.profile import profile
         app.register_blueprint(profile)
+        from app.views.details import details
+        app.register_blueprint(details)
         return app

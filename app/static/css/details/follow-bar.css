@@ -1,0 +1,50 @@
+.follow-bar--body-wrapper{
+    width: 470px;
+    height: 70px;
+    justify-content: space-evenly;
+    display: flex;
+    margin-top: 3em;
+}
+
+.follow-bar--photo-container{
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.follow-bar--photo-container>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.follow-bar--details-container{
+    min-width: 140px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.follow-bar--details-container>p{
+    margin-bottom: 0px;
+    font-family: system-ui;
+    font-style: normal; 
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    background: -webkit-linear-gradient(left, #7A1A7B , #864CFD);
+    background: -o-linear-gradient(right, #7A1A7B, #864CFD);
+    background: -moz-linear-gradient(right, #7A1A7B, #864CFD);
+    background: linear-gradient(to right, #7A1A7B , #864CFD); 
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+/* ADDRESS CONTAINER CURRENTLY LOCATED IN owner-bar.css */
+
+
