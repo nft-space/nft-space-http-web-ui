@@ -1,5 +1,13 @@
 <div class="details--comments--main-container">
     <h1>Comments</h1>
+    <!-- COMMENTS CONTENT -->
     {% include 'details/comment-item.html' %}
     {% include 'details/comment-item.html' %}
+    <!-- COMMENTS FORM -->
+    <div class="comments--form-wrapper">
+        <input class="comments--input" type="text" placeholder="Leave a comment">
+        <button type="button" class="comments--submit">
+            Submit
+        </button>
+    </div>
 </div>

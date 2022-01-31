@@ -63,4 +63,45 @@
     margin: 1em;
 }
 
+/* COMMENTS FORM */
+.comments--form-wrapper{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0px;
+}
+.comments--input{
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: #858585;
+    display: flex;
+    align-items: center;
+    width: 1170px;
+    height: 48px;
+    padding: 1em 2em;
+    border-radius: 50px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+}
+
+.comments--submit{
+    width: 97px;
+    height: 40px;
+    background: linear-gradient(87.77deg , #7A1A7B 24.51%, #864CFD 155.9%);
+    border-radius: 50px;
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    position: relative;
+    right: 102px;
+}
 

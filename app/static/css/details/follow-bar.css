@@ -3,7 +3,7 @@
     height: 70px;
     justify-content: space-evenly;
     display: flex;
-    margin-top: 3em;
+    margin: 3em 0px;
 }
 
 .follow-bar--photo-container{

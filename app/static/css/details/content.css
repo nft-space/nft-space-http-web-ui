@@ -3,7 +3,7 @@
     height: fit-content;
     display: flex;
     justify-content: center;
-    padding: 3em 0px;
+    padding: 4em 0px;
 }
 
 .details--content--wrapper>*{
@@ -161,9 +161,8 @@
     line-height: 130%;
     letter-spacing: -0.02em;
     color: #000000;
-    padding: .5em 0px;
+    padding: 0.5em 0px;
     border-bottom: 1px solid #E8E8E8;
-    margin-top: 1em;
 }
 
 .details--content--description-container>p{
