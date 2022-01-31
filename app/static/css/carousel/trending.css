@@ -1,0 +1,17 @@
+.carousel--trending--item-container{
+    width: 312px!important;
+    height: 312px!important;
+    display: flex!important;
+    border-radius: 16px;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    margin: 1em .5em;
+}
+
+.carousel--trending--item-container>img{
+    max-width: 280px;
+    height: 280px;
+    border-radius: 16px;
+}
+

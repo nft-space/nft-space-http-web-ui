@@ -1,0 +1,24 @@
+.discovery--header--container{
+    width: 100%;
+    height: 391px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discovery--header--container>span{
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 130%;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
+    width: auto;
+    position: absolute;
+}
+
+.discovery--header--container>img{
+    width: 100%;
+    height: 100%
+}

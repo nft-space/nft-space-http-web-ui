@@ -1,0 +1,51 @@
+<section class="index-sections--main--wrapper">
+    <div class="index-sections--main--container">
+        <!-- CONTENT -->
+        <div class="index-sections--main--overview-content-container">
+
+            <!-- TEXT -->
+            <div class="index-sections--main--overview-text-container">
+                <h3>
+                    Collect your trending NFTs
+                </h3>
+                <h1>
+                    Discover Extraordinary NFTs &#127919; and Engage with Creators &#128293;
+                </h1>
+                <p>
+                    First NFT community platform on Algorand
+                </p>
+            </div>
+            <!-- INTERACTIONS -->
+
+                <input class="index-sections--main--overview-search" type="text" placeholder="Search collection, item and user">
+                <button class="index-sections--main--overview-explore-button index-sections--main--overview-root-button border" type="button" onClick="location.href='/discover'">
+                    Explore
+                </button>
+
+            <div class="index-sections--main--profile-preview-container">
+                <div class="index-sections--main--profile-preview-image-container">
+                    <img 
+                        src="{{ url_for('static', filename='/png/index_sections__main__profile_preview.png') }}"
+                        alt="picture of nfts and artists overlapped to show an overview of the website"
+                    >
+                </div>
+                <div class="index-sections--main--profile-preview-text">
+                    <span class="index-sections--main--profile-preview-text-header">
+                        25+
+                    </span>
+                    <span class="index-sections--main--profile-preview-text-subtitle">
+                        The Best NFT Authors
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMAGE -->
+        <div class="index-sections--main--overview-image-container">
+            <img 
+                src="{{ url_for('static', filename='/png/index_sections__main__overview.png') }}"
+                alt="picture of nfts and artists overlapped to show an overview of the website"
+            >
+        </div>
+    </div>
+</section>

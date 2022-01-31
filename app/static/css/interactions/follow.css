@@ -1,0 +1,24 @@
+.follow-button-image{
+    width:100%;
+    height: auto;
+}
+
+.follow-button-lg{
+    width: 191px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(87.77deg, #7A1A7B 24.51%, #864CFD 155.9%);
+    border-radius: 50px;
+    padding: 1em 2em;
+    /* FONTS  */
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+
+}

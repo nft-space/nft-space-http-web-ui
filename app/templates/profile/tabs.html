@@ -1,0 +1,78 @@
+<div class="profile--tabs-wrapper">
+    <ul class="nav nav-tabs mb-3 justify-content-center " id="pills-tab" role="tablist">
+        <!-- CREATED TAB -->
+        <li class="nav-item">
+            <a  data-toggle="pill" href="#pills-created" role="tab" 
+            aria-selected="true" class="nav-link active" id="pills-created-button"
+        >Created</a>
+        </li>
+        <!-- OWNED TAB -->
+        <li class="nav-item">
+            <a data-toggle="pill" href="#pills-owned" role="tab"  
+            aria-selected="false" class="nav-link" id="pills-owned-button"
+        >Owned</a>
+        </li>
+        <!-- COLLECTIONS TAB (dropdown)-->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true">Collections</a>
+            <div class="dropdown-menu">
+            <a class="dropdown-item" href="#pills-collections" id="pills-collections-button">View collections</a>
+            <!-- Modal button -->
+            <a class="dropdown-item" id="addCollectionModalButton" onClick="collectionsMethods.openAddCollectionModal()">Register Collection</a>
+            </div>
+        </li>
+        <!-- SAVED TAB -->
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#pills-saved" role="tab" aria-selected="false" id="pills-saved-button">Saved</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        {% include 'profile/tab-functions.html'%}
+        <!-- CREATED -->
+        <div 
+            class="tab-pane fade show active" 
+            id="pills-created" 
+            role="tabpanel" 
+            aria-labelledby="pills-created"
+        >
+            <div class="gallery--wrapper">
+                <div class="gallery--tabs-container">
+                    <div class="gallery--nft--main-container">
+                        {% include 'cards/nft.html' %}
+                        {% include 'cards/nft.html' %}
+                        {% include 'cards/nft.html' %}
+                        {% include 'cards/nft.html' %}
+                        {% include 'cards/nft.html' %}
+                        {% include 'cards/nft.html' %}
+                        {% include 'cards/nft.html' %}
+                        {% include 'cards/nft.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- OWNED -->
+        <div 
+            class="tab-pane fade" 
+            id="pills-owned" 
+            role="tabpanel" 
+            aria-labelledby="pills-owned"
+        >
+        </div>
+        <!-- COLLECTIONS -->
+        <div 
+            class="tab-pane fade" 
+            id="pills-collections" 
+            role="tabpanel" 
+            aria-labelledby="pills-collections"
+        >
+        </div>
+        <!-- SAVED -->
+        <div 
+            class="tab-pane fade" 
+            id="pills-saved" 
+            role="tabpanel" 
+            aria-labelledby="pills-saved"
+        >
+        </div>
+    </div>
+</div>

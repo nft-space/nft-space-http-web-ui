@@ -1,0 +1,34 @@
+.gallery--wrapper{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery--container{
+    width: 66%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0;
+}
+
+.gallery--container>span{
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+.gallery--tabs-container{
+    width: 59%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0;
+    
+}

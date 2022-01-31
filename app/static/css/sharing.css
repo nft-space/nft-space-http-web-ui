@@ -1,0 +1,13 @@
+.sharing--main-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 240px;
+    height: 48px;
+    background: transparent;
+}
+
+.sharing--main-container>img{
+    width: 48px;
+    height: 48px;
+}

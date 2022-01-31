@@ -1,0 +1,138 @@
+.profile--info--wrapper{
+    width: 100%;
+    height: 350px;
+    display: flex;
+}
+
+
+.profile--info--main-container{
+    width: 57%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    position: relative;
+    bottom: 95px;
+}
+
+/* --------------PHOTO ------------------- */
+.profile--info--photo-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    top: 10px;
+}
+
+.profile--info--photo-container{
+    width: 370px;
+    height: 370px;
+    background-color: #FAFAFA;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile--info--photo-container>img{
+    width: 354px;
+    height: 354px;
+    border-radius: 16px;
+}
+
+/* --------------BIO ------------------- */
+.profile--info--bio-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.profile--info--bio-name{
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: #000000;
+    margin-bottom: 0.5em;
+}
+
+.profile--info--bio-address-button{
+    width: 132px;
+    height: 34px;
+    border-radius: 30px;
+    padding: 1em 2em;
+    background: #FFFFFF;
+    /* FONTS */
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5em;
+}
+
+.profile--info--bio-description{
+    width: 380px;
+    height: 48px;
+    /* FONTS */
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: #000000;
+    margin-bottom: 1em;
+}
+
+.profile--info--bio-connections{
+    width: 296px;
+    height: 56px;
+}
+.profile--info--bio-connections .nav {
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: #7E7E7E;
+  }
+  
+  .profile--info--bio-connections .nav li:not(:first-child) {
+    margin-left: 2em;
+    padding-left: 1em;
+    border-left: 1px solid #E8E8E8;
+  }
+  
+  .profile--info--bio-connections .nav strong {
+    display: block;
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+/* --------------INTERACTIONS ------------------- */
+
+.profile--info--interactions-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile--info--follow-container{
+    position: relative;
+    bottom: 75px
+}

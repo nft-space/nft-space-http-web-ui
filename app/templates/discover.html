@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Discover {% endblock %}
+
+{% block body %}
+
+    {% include 'discover/sections/header.html' %}
+    <div class="discovery--body-wrapper">
+        {% include 'discover/sections/top-artists.html' %}
+        {% include 'discover/sections/discover-collections.html' %}
+        {% include 'discover/sections/discover-nfts.html' %}
+    </div>
+
+{% endblock %}

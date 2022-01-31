@@ -1,0 +1,6 @@
+.gallery--artist--main-container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 1em;
+}

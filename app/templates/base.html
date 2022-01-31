@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> {% block title %}{% endblock %} </title>
+    {% include 'cdn/css.html' %}
+    {% block head %}{% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/base.css') }}">
+    <!-- FONTS -->
+    <link href="http://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
+    <!-- Emojis -->
+    <meta charset="UTF-8">
+
+    <!--                 ------BASE ---------             -->
+    <!-- nav -->
+    <link href="{{ url_for('static', filename='/css/nav.css') }}" rel="stylesheet">
+    <!-- footer -->
+    <link href="{{ url_for('static', filename='/css/footer.css') }}" rel="stylesheet">
+
+    <!--                 -----PAGES -----              -->
+    <!-- Index news feed -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/index/news-feed.css') }}">
+    <!-- Index sections -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/index/sections/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/index/sections/trending.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/index/sections/hot.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/index/sections/about.css') }}">
+    <!-- Discovery sections-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/discovery/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/discovery/main.css') }}">
+    <!-- Profile sections -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/profile/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/profile/info.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/profile/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/profile/content.css') }}">
+
+    <!--              ---------CAROUSEL------------- -->
+    <!-- slick -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/carousel/slick.css') }}">
+    <!-- Trending -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/carousel/trending.css') }}">
+    <!-- Hot -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/carousel/hot.css') }}">
+
+    <!--            ---------CARDS ------------ -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/cards/collection.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/cards/artist.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/cards/nft.css') }}">
+
+    <!--         ----------INTERACTIONS------------>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/interactions/follow.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/interactions/heart.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/interactions/bookmark.css') }}">
+
+    <!--        ------------GALLERY------------  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/gallery/util.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/gallery/nft.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/gallery/artist.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/gallery/collection.css') }}">
+
+    <!--       --------------SHARING ----------- -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/sharing.css') }}">
+</head>
+
+<body>
+    {% include 'cdn/js.html' %}
+    <script src="{{ url_for('static', filename='/js/carousel.js') }}" type="text/javascript"></script>
+    <script>
+        //todo change to just table not 'methods'
+        jQuery(document).ready(
+            (function(){
+                $(window).bind("load", function() {
+                    let indexMethods = [
+                        carouselMethods,
+                    ]
+                    indexMethods.forEach((obj)=> obj.init())
+                });
+            })()
+        )
+    </script>
+    {% block javascript %}{% endblock %}
+    {% include 'nav.html' %}
+    {% include 'news-bar/main.html' %}
+
+    {% block body %}{% endblock %}
+    {% include 'footer.html' %}
+</body>
+</html>

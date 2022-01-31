@@ -1,0 +1,64 @@
+.cards--collection--main-container{
+    width: 270px;
+    height: 338px;
+    background: #FAFAFA;
+    border-radius: 16px;
+    margin: 1em;
+}
+
+.cards--collection--main-photo{
+    height: 250px;
+    width: 250px;
+    border-radius: 16px;
+    margin: 8px;
+}
+
+.cards--collection--content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 72px;
+    position: relative;
+    bottom: 52px;
+}
+
+.cards--collection--profile-photo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    bottom: 36px;
+}
+
+.cards--collection--profile-photo-container>img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.cards--collection--artist-name{
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+.cards--collection--collection-name{
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: -0.02em;
+}

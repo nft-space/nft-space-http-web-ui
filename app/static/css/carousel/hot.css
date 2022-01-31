@@ -1,0 +1,28 @@
+.carousel--hot--wrapper{
+    width: 1170px;
+    height: auto;
+}
+
+.carousel--hot--wrapper>h3{
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: #000000;
+    margin-bottom: 1em;
+
+}
+
+.carousel--hot--item-container{
+    width: 270px!important;
+    height: 338px!important;
+    display: flex!important;
+    border-radius: 16px;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    margin: 1rem 1rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}

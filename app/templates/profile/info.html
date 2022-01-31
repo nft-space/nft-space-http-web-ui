@@ -1,0 +1,49 @@
+<div class="profile--info--wrapper">
+    <div class="profile--info--main-container">
+        <!-- PHOTO -->
+        <div class="profile--info--photo-wrapper">
+            <div class="profile--info--photo-container">
+                <img 
+                    src="{{ url_for('static', filename='/png/profile__info__profile_image.png') }}" 
+                    alt="nft example monkey profile photo "
+                >
+            </div>
+        </div>
+
+        <!-- BIO -->
+        <div class="profile--info--bio-wrapper">
+            <!-- Artist name -->
+            <div class="profile--info--bio-name"> Artist Name </div>
+            <!-- Address Button -->
+            <button type="button" class="profile--info--bio-address-button">
+                D5J7....4CA
+            </button>
+            <div class="profile--info--bio-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Sed a, in nisi risus urna, vitae urna.   
+            </div>
+            <!-- Artist connections  -->
+            <div class="profile--info--bio-connections">
+                <ul class="nav">
+                    <li>Items <strong>203</strong></li>
+                    <li >Followers <strong>11</strong></li>
+                    <li >Following <strong>12</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- INTERACTIONS -->
+        <div class="profile--info--interactions-wrapper">
+            <!-- Follow button -->
+            <div class="profile--info--follow-container">
+                <button type="button" class="follow-button-lg">
+                    Followed
+                </button>
+            </div>
+            <!-- Sharing buttons -->
+            {% include 'sharing.html'%}
+        </div>
+    </div>
+</div>
+
+

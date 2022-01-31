@@ -1,0 +1,32 @@
+.news-bar--container{
+    height: 48px;
+    width: 100%;
+    background: linear-gradient(45deg,#7A1A7B,#864CFD);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+.news-bar--text{
+    color: #FFFFFF;
+    font-family: system-ui;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.16em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.news-bar--text>span{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.news-feed--star{
+    height: 1em;
+    width: 1em;
+}
+
+
