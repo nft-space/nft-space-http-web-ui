@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template
 from app.config.config_handling import get_config_value
 from app.views.util import process_src_image_list, verify_request
-import requests
+import requests, json
 
 profile = Blueprint('profile', __name__)
 
@@ -9,8 +9,8 @@ profile = Blueprint('profile', __name__)
 def render_profile(artist_address):
     db_host = get_config_value('db_api', 'db_host')
 
-    profile_details = verify_request(
-        requests.get(f'{db_host}/profile/{artist_address}')
+    profile_details = json.loads(
+        requests.get(f'{db_host}/profile/{artist_address}').content
     )
     created_nft_list = verify_request(
         requests.get(f'{db_host}/nfts/{artist_address}/created?count=10&order_by=latest')

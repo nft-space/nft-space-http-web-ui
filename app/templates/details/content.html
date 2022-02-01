@@ -3,8 +3,8 @@
     <div class="details--content--photo-details-wrapper">
         <div class="details--content--photo-container">
             <img 
-                src="{{ url_for('static', filename='/png/details__photo_nft.png') }}" 
-                alt="nft space astro man for details page"
+                src="{% if nft_details.thumbnail_src %}{{nft_details.thumbnail_src}}{% else %}{{nft_details.src}}{% endif %}" 
+                alt="main nft photo "
             >
         </div>
         <div class="details--content--caption-container">
@@ -18,7 +18,7 @@
         <div class="details--content--nft-details-wrapper">
             <!-- TITLE (+interactions)  -->
             <div class="details--content--title-container">
-                <p>Astro #001</p>
+                <p>{{nft_details.title}}</p>
                 <div class="details--content--interactions-container">
                     <!-- Viewed  -->
                     <div class="details--content--interactions-item">
@@ -26,7 +26,7 @@
                             src="{{ url_for('static', filename='/png/interactions__viewed.png') }}"
                             alt="interaction viewed"
                         >
-                        <span>43k</span>
+                        <span>{{nft_details.view_count}}</span>
                     </div>
                     <!-- Liked -->
                     <div class="details--content--interactions-item">
@@ -35,7 +35,7 @@
                             src="{{ url_for('static', filename='/png/interactions__heart.png') }}"
                             alt="interaction heart"
                         >
-                        <span>43k</span>
+                        <span>{{nft_details.like_count}}</span>
                     </div>
                     <!-- Bookmarked -->
                     <div class="details--content--interactions-item">
@@ -44,23 +44,23 @@
                             src="{{ url_for('static', filename='/png/interactions__bookmark.png') }}"
                             alt="interaction bookmark"
                         >  
-                        <span>2k</span>
+                        <span>{{nft_details.save_count}}</span>
                     </div>
                 </div>
             </div>
 
             <!-- TAGS -->
             <div class="details--content--tags-container">
+                <!-- DEFAULT TAG -->
                 <div class="details--content--tags-item">
-                    #tagsplacedinhere
+                    #NFT-Space
                 </div>
-                <div class="details--content--tags-item">
-                    #tags
-                </div>
-                <div class="details--content--tags-item">
-                    #tagsplace
-                </div>
-
+                <!-- DYNAMIC TAG -->
+                {% for tag in nft_details.tags%}
+                    <div class="details--content--tags-item">
+                        {{tag}}
+                    </div>
+                {% endfor %}
             </div>
 
             <!-- FOLLOW BAR -->
@@ -69,17 +69,20 @@
             <!-- DESCRIPTION -->
             <div class="details--content--description-container">
                 <h1>Description </h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ametconsectetur adipisicing elit. </p>
+                <p>{% if nft_details.description %} {{nft_details.description}} {% else %} No description; this NFT speaks for itself! {% endif%}</p>
             </div>
 
             <!-- DETAILS -->
             <div class="details--content--details-container">
                 <h1>Details </h1>
                 <div class="details--content--details-item">
-                    <p>Token ID</p> <h3>4477</h3>
+                    <p>Token ID</p> <h3>{{nft_details.id}}</h3>
                 </div>
                 <div class="details--content--details-item">
-                    <p>Token Standard</p> <h3>ERC-721</h3>
+                    <p>Unit Name</p> <h3>{{nft_details.unitname}}</h3>
+                </div>
+                <div class="details--content--details-item">
+                    <p>Token Standard</p> <h3>{{nft_details.standard}}</h3>
                 </div>
                 <div class="details--content--details-item">
                     <p>Blockchain</p> <h3>Algorand</h3>
@@ -87,6 +90,7 @@
             </div>
 
             <!-- BUY CONTAINER -->
+            {% if is_listed  %} 
             <div class="details--content--buy-container">
                 <div class="details--content--buy-info-wrapper">
                     <img 
@@ -94,7 +98,7 @@
                         alt="rand gallery logo "
                     >
                     <p> 
-                        75 
+                        {{is_listed[0].price}} 
                         <img 
                             src="{{ url_for('static', filename='/png/algorand_algo_logo.png') }}" 
                             alt="algorand algo picture "
@@ -106,8 +110,7 @@
                     Buy
                 </button>
             </div>
-
-
+            {% endif %}
         </div>
     </div>
 </div>
