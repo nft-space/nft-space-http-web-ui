@@ -1,4 +1,10 @@
 <div class="index-sections--trending--container">
-    {% include 'carousel/trending/carousel.html' %}
-    {% include 'carousel/trending/carousel.html' %}
+    <!-- Carousel 1/2 -->
+    {% with trending_nft_list = trending_nft_list[0:6] %}
+        {% include 'carousel/trending/carousel.html' %}
+    {% endwith %}
+    <!-- Carousel 2/2 -->
+    {% with trending_nft_list = trending_nft_list[7:14] %}
+        {% include 'carousel/trending/carousel.html' %}
+    {% endwith %}
 </div>

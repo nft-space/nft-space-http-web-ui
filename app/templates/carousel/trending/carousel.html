@@ -1,11 +1,7 @@
 <div class="artist-preview-carousel-container">
 	<div class="slider trending-carousel">
+        {% for trending_nft in trending_nft_list %}
                 {% include 'carousel/trending/item.html' %}
-                {% include 'carousel/trending/item.html' %}
-                {% include 'carousel/trending/item.html' %}
-                {% include 'carousel/trending/item.html' %}
-                {% include 'carousel/trending/item.html' %}
-                {% include 'carousel/trending/item.html' %}
-                {% include 'carousel/trending/item.html' %}
+        {% endfor %}
 	</div>
 </div>

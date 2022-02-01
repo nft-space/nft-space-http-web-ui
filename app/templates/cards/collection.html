@@ -1,21 +1,21 @@
 <div class="cards--collection--main-container">
     <img 
         class="cards--collection--main-photo"
-        src="{{ url_for('static', filename='/png/nft_example4.png') }}"
-        alt="nft"
+        src="{{ collection.collection_cover_src }}"
+        alt="collection cover image"
     >
     <div class="cards--collection--profile-photo-container">
         <img 
-            src="{{ url_for('static', filename='/png/nft_example3.png') }}"
-            alt="nft"
+            src="{{ collection.artist_src }}"
+            alt="collection artist profile photo"
         >
     </div>
     <div class="cards--collection--content-container">
         <div class="cards--collection--artist-name">
-            Artist name
+            {{collection.artist_name}}
         </div>
         <div class="cards--collection--collection-name">
-            Collection name
+            {{collection.collection_title}}
         </div>
     </div>
 </div>

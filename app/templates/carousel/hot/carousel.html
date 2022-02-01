@@ -1,9 +1,5 @@
 <div class="slider hot-carousel">
-    {% include 'carousel/hot/item.html' %}
-    {% include 'carousel/hot/item.html' %}
-    {% include 'carousel/hot/item.html' %}
-    {% include 'carousel/hot/item.html' %}
-    {% include 'carousel/hot/item.html' %}
-    {% include 'carousel/hot/item.html' %}
-    {% include 'carousel/hot/item.html' %}
+    {% for hot_collection in hot_collection_list %}
+        {% include 'carousel/hot/item.html' %}
+    {% endfor %}
 </div>

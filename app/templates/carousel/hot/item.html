@@ -1,3 +1,5 @@
 <div class="carousel--hot--item-container">
-    {% include 'cards/collection.html' %}
+    {% with collection = hot_collection %}
+            {% include 'cards/collection.html' %}
+    {% endwith %}
 </div>

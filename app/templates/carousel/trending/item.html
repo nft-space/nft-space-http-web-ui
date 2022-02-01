@@ -1,6 +1,6 @@
 <div class="carousel--trending--item-container">
     <img 
-        src="{{ url_for('static', filename='/png/nft_example.png') }}"
+        src="{% if trending_nft.thumbnail_src %}{{trending_nft.thumbnail_src}}{% else %}{{trending_nft.src}}{% endif %}"
         alt="nft"
     >
 </div>
