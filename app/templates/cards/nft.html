@@ -1,8 +1,8 @@
 <div class="cards--nft--main-container">
     <img 
         class="cards--nft--main-photo"
-        src="{{ url_for('static', filename='/png/nft_example.png') }}"
-        alt="astro nft"
+        src="{% if nft.thumbnail_src %}{{nft.thumbnail_src}}{% else %}{{nft.src}}{% endif %}"
+        alt="nft image "
     >
     <div class="cards--nft--interaction-container">
         <img 
@@ -10,15 +10,15 @@
             src="{{ url_for('static', filename='/png/interactions__heart.png') }}"
             alt="interaction heart"
         >
-        <span>43k</span>
+        <span>{{ nft.like_count }}</span>
         <img 
             class="bookmark-inactive"
             src="{{ url_for('static', filename='/png/interactions__bookmark.png') }}"
             alt="interaction bookmark"
         >  
-        <span>2k</span>
+        <span>{{ nft.save_count }}</span>
     </div>
     <div class="cards--nft--content-container">
-        Artwork title
+        {{ nft.title }}
     </div>
 </div>

@@ -2,10 +2,9 @@
     <div class="gallery--container">
         <span>Top Artists &#128293;</span>
         <div class="gallery--artist--main-container">
-            {% include 'cards/artist.html' %}
-            {% include 'cards/artist.html' %}
-            {% include 'cards/artist.html' %}
-            {% include 'cards/artist.html' %}
+            {% for artist in discover_artist_list[0:4] %}
+                    {% include 'cards/artist.html' %}
+            {% endfor %}
         </div>
     </div>
 </div>

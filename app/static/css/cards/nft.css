@@ -17,7 +17,7 @@
 }
 
 .cards--nft--interaction-container{
-    width: 123px;
+    width: fit-content;
     height: 40px;
     background: white;
     box-shadow: 0px 10px 76px rgba(0, 0, 0, 0.1);
@@ -29,6 +29,7 @@
     text-align: center;
     bottom: 30px;
     margin: auto;
+    padding: 0.5em 1em;
 }
 
 .cards--nft--interaction-container>span{
@@ -40,12 +41,12 @@
         line-height: 15px;
         color: #000000;
         text-transform: uppercase;
+        margin-right: 0.5em;
 }
 
 .cards--nft--interaction-container>img{
     height: 17px;
     width: 17px;
-    margin-left: .6em;
 }
 
 .cards--nft--interaction-container>*{

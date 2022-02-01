@@ -2,14 +2,9 @@
     <div class="gallery--container">
         <span>Discover Collections &#127919;</span>
         <div class="gallery--collection--main-container">
-            {% include 'cards/collection.html' %}
-            {% include 'cards/collection.html' %}
-            {% include 'cards/collection.html' %}
-            {% include 'cards/collection.html' %}
-            {% include 'cards/collection.html' %}
-            {% include 'cards/collection.html' %}
-            {% include 'cards/collection.html' %}
-            {% include 'cards/collection.html' %}
+            {% for collection in discover_collection_list[0:8] %}
+                {% include 'cards/collection.html' %}
+            {% endfor %}
         </div>     
     </div>
 </div>
