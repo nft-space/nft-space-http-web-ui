@@ -1,6 +1,7 @@
 DEBUG = False
 # Development only
 DEBUG = False
+import os
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 SQLALCHEMY_DATABASE_URI = "postgresql://postgres:password@localhost:5432/nftspace_db"

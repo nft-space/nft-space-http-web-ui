@@ -90,6 +90,7 @@
     letter-spacing: -0.02em;
     color: #000000;
     margin-bottom: 1em;
+    overflow: overlay;
 }
 
 .profile--info--bio-connections{

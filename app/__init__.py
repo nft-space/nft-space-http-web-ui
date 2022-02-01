@@ -29,4 +29,6 @@ def create_app():
         app.register_blueprint(profile)
         from app.views.details import details
         app.register_blueprint(details)
+        from app.views.template_filters import template_filters
+        app.register_blueprint(template_filters)
         return app

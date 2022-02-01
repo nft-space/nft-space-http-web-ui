@@ -38,14 +38,9 @@
             <div class="gallery--wrapper">
                 <div class="gallery--tabs-container">
                     <div class="gallery--nft--main-container">
-                        {% include 'cards/nft.html' %}
-                        {% include 'cards/nft.html' %}
-                        {% include 'cards/nft.html' %}
-                        {% include 'cards/nft.html' %}
-                        {% include 'cards/nft.html' %}
-                        {% include 'cards/nft.html' %}
-                        {% include 'cards/nft.html' %}
-                        {% include 'cards/nft.html' %}
+                        {% for nft in created_nft_list %}
+                            {% include 'cards/nft.html' %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>
