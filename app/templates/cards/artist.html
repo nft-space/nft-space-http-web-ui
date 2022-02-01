@@ -1,24 +1,25 @@
-<div class="cards--artist--main-container">
-    <div class="cards--artist--header">
-        <img 
-            src="{{ artist.background_src }}"
-            alt="artist card background"
-        >
-        <div class="cards--artist--follow-container">
+<a href="/profile/{{ artist.artist_address}}">
+    <div class="cards--artist--main-container">
+        <div class="cards--artist--header">
             <img 
-                src="{{ url_for('static', filename='/png/interactions__follow_button.png') }}"
-                alt="interactions follow button"
+                src="{{ artist.background_src }}"
+                alt="artist card background"
             >
-        </div>     
+            <div class="cards--artist--follow-container">
+                <img 
+                    src="{{ url_for('static', filename='/png/interactions__follow_button.png') }}"
+                    alt="interactions follow button"
+                >
+            </div>     
+        </div>
+        <div class="cards--artist--photo-container">
+            <img 
+                src="{{ artist.src }}"
+                alt="artist user photo"
+            > 
+        </div> 
+        <div class="cards--artist--content-container">
+            {{ artist.artist_name }}
+        </div>
     </div>
-    <div class="cards--artist--photo-container">
-        <img 
-            src="{{ artist.src }}"
-            alt="artist user photo"
-        > 
-    </div> 
-    <div class="cards--artist--content-container">
-        {{ artist.artist_name}}
-    </div>
-    
-</div>
+</a>

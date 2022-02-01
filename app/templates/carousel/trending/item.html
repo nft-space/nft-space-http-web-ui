@@ -1,6 +1,8 @@
-<div class="carousel--trending--item-container">
-    <img 
-        src="{% if trending_nft.thumbnail_src %}{{trending_nft.thumbnail_src}}{% else %}{{trending_nft.src}}{% endif %}"
-        alt="nft"
-    >
-</div>
+<a href="/details/{{trending_nft.id}}">
+    <div class="carousel--trending--item-container">
+        <img 
+            src="{% if trending_nft.thumbnail_src %}{{trending_nft.thumbnail_src}}{% else %}{{trending_nft.src}}{% endif %}"
+            alt="nft"
+        >
+    </div>
+</a>
