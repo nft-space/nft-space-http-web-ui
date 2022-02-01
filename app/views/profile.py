@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template
 from app.config.config_handling import get_config_value
-from app.views.util import process_src_image_list, get_user_params, verify_request
-import requests, json
+from app.views.util import process_src_image_list, verify_request
+import requests
 
 profile = Blueprint('profile', __name__)
 
