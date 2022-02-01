@@ -1,24 +1,26 @@
-<div class="cards--nft--main-container">
-    <img 
-        class="cards--nft--main-photo"
-        src="{% if nft.thumbnail_src %}{{nft.thumbnail_src}}{% else %}{{nft.src}}{% endif %}"
-        alt="nft image "
-    >
-    <div class="cards--nft--interaction-container">
+<a href="/details/{{ nft.id }}">
+    <div class="cards--nft--main-container">
         <img 
-            class="heart-inactive"
-            src="{{ url_for('static', filename='/png/interactions__heart.png') }}"
-            alt="interaction heart"
+            class="cards--nft--main-photo"
+            src="{% if nft.thumbnail_src %}{{nft.thumbnail_src}}{% else %}{{nft.src}}{% endif %}"
+            alt="nft image "
         >
-        <span>{{ nft.like_count }}</span>
-        <img 
-            class="bookmark-inactive"
-            src="{{ url_for('static', filename='/png/interactions__bookmark.png') }}"
-            alt="interaction bookmark"
-        >  
-        <span>{{ nft.save_count }}</span>
+        <div class="cards--nft--interaction-container">
+            <img 
+                class="heart-inactive"
+                src="{{ url_for('static', filename='/png/interactions__heart.png') }}"
+                alt="interaction heart"
+            >
+            <span>{{ nft.like_count }}</span>
+            <img 
+                class="bookmark-inactive"
+                src="{{ url_for('static', filename='/png/interactions__bookmark.png') }}"
+                alt="interaction bookmark"
+            >  
+            <span>{{ nft.save_count }}</span>
+        </div>
+        <div class="cards--nft--content-container">
+            {{ nft.title }}
+        </div>
     </div>
-    <div class="cards--nft--content-container">
-        {{ nft.title }}
-    </div>
-</div>
+</a>

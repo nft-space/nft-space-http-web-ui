@@ -1,16 +1,22 @@
 <div class="details--owner-bar--container">
-    <div class="details--owner-bar--profile-photo-container">
-        <img 
-            src="{{ owner_details.src }}"
-            alt="owner profile image "
-        >
-    </div>
+    <a href="/profile/{{ owner_details.artist_address }}">
+        <div class="details--owner-bar--profile-photo-container">
+            <img 
+                src="{{ owner_details.src }}"
+                alt="owner profile image "
+            >
+        </div>
+    </a>
     <p> 
-        {% if owner_details.monikor %}{{ owner_details.monikor}}{% else %}Anonymous{% endif %}
+        <a href="/profile/{{ owner_details.artist_address }}">
+            {% if owner_details.monikor %}{{ owner_details.monikor}}{% else %}Anonymous{% endif %}
+        </a>
     </p>
-    <div class="address-container">
-        {{owner_details.artist_address | profile_name_truncated }}
-    </div>
+    <a href="/profile/{{ owner_details.artist_address }}">
+        <div class="address-container">
+            {{owner_details.artist_address | profile_name_truncated }}
+        </div>
+    </a>
     <div class="details--owner-bar--follow-container">
         <img 
             src="{{ url_for('static', filename='/png/interactions__follow_button.png') }}"
