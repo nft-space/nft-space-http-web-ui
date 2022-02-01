@@ -12,10 +12,8 @@ def render_profile(artist_address):
     profile_details = verify_request(
         requests.get(f'{db_host}/profile/{artist_address}')
     )
-    created_nft_list = json.loads(
-        requests.get(
-            f'{db_host}/nfts/{artist_address}/created?count=10&order_by=latest'
-        ).content
+    created_nft_list = verify_request(
+        requests.get(f'{db_host}/nfts/{artist_address}/created?count=10&order_by=latest')
     )
     
     return render_template(

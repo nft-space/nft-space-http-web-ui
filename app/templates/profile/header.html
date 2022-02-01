@@ -1,6 +1,8 @@
 <div class="profile--header--photo-container">
+    {% if profile_details.background_src %}
     <img 
         src="{{ profile_details.background_src }}" 
         alt="profile page header photo"
     >
+    {% endif %}
 </div>
