@@ -10,7 +10,10 @@ def render_details(nft_id):
     db_host = get_config_value('db_api', 'db_host')
 
     nft_details = json.loads(requests.get(f'{db_host}/nft/{nft_id}').content)
+
     owner_address = nft_details['owned_by']
+    artist_address = nft_details['artist_address']
+    artist_details = json.loads(requests.get(f'{db_host}/profile/{artist_address}').content)
     owner_details = json.loads(requests.get(f'{db_host}/profile/{owner_address}').content)
     is_listed = json.loads(requests.get(f'https://www.randswap.com/v1/nft-offers/{nft_id}').content)
     print('HHHHHHH', is_listed)
@@ -19,5 +22,6 @@ def render_details(nft_id):
         "details.html",
         nft_details = nft_details,
         owner_details = owner_details,
+        artist_details = artist_details,
         is_listed = is_listed
     )

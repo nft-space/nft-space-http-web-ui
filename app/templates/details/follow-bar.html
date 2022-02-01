@@ -1,14 +1,14 @@
 <div class="follow-bar--body-wrapper">
     <div class="follow-bar--photo-container">
         <img 
-            src="{{url_for('static', filename='/png/nft_example4.png')}}" 
+            src="{{ artist_details.src }}" 
             alt="follow bar image for profile"
         >
     </div>
     <div class="follow-bar--details-container">
-        <p>Creator Name</p>
+        <p>{% if artist_details.monikor %}{{ artist_details.monikor }}{% else %} Anonymous {% endif %}</p>
         <div class="address-container">
-            D5J7...d4ca
+            {{ artist_details.artist_address | profile_name_truncated }}
         </div>
     </div>
 
