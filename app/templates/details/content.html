@@ -3,8 +3,8 @@
     <div class="details--content--photo-details-wrapper">
         <div class="details--content--photo-container">
             <img 
-                src="{% if nft_details.thumbnail_src %}{{nft_details.thumbnail_src}}{% else %}{{nft_details.src}}{% endif %}" 
-                alt="main nft photo "
+                src="{% if nft_details.src %}{{nft_details.src}}{% endif %}" 
+                style="background-image: url('{{nft_details.thumbnail_src}}'); background-size: cover;"
             >
         </div>
         <div class="details--content--caption-container">
