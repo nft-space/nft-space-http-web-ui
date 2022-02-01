@@ -1,15 +1,15 @@
 <div class="details--owner-bar--container">
     <div class="details--owner-bar--profile-photo-container">
         <img 
-            src="{{ url_for('static', filename='/png/empty_user.png') }}"
-            alt="interactions follow button"
+            src="{{ owner_details.src }}"
+            alt="owner profile image "
         >
     </div>
-    <p>
-        Test Name 
+    <p> 
+        {% if owner_details.monikor %}{{ owner_details.monikor}}{% else %}Anonymous{% endif %}
     </p>
     <div class="address-container">
-        D5J7...DCA
+        {{owner_details.artist_address | profile_name_truncated }}
     </div>
     <div class="details--owner-bar--follow-container">
         <img 
