@@ -13,7 +13,6 @@ def get_user_params():
 
 
 def verify_request(request):
-   
     if request.status_code == 200:
         return json.loads(request.content)
     else:

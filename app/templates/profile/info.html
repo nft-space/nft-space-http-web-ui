@@ -4,8 +4,8 @@
         <div class="profile--info--photo-wrapper">
             <div class="profile--info--photo-container">
                 <img 
-                    src="{{ url_for('static', filename='/png/profile__info__profile_image.png') }}" 
-                    alt="nft example monkey profile photo "
+                    src="{{ profile_details.src}}" 
+                    alt="profile user photo "
                 >
             </div>
         </div>
@@ -13,21 +13,22 @@
         <!-- BIO -->
         <div class="profile--info--bio-wrapper">
             <!-- Artist name -->
-            <div class="profile--info--bio-name"> Artist Name </div>
+            <div class="profile--info--bio-name"> 
+                {% if profile_details.monikor %}{{ profile_details.monikor}}{% else %}Anonymous{% endif %}
+            </div>
             <!-- Address Button -->
             <button type="button" class="profile--info--bio-address-button">
-                D5J7....4CA
+                {{ profile_details.artist_address | profile_name_truncated }}
             </button>
             <div class="profile--info--bio-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Sed a, in nisi risus urna, vitae urna.   
+                {{ profile_details.user_bio }}  
             </div>
             <!-- Artist connections  -->
             <div class="profile--info--bio-connections">
                 <ul class="nav">
-                    <li>Items <strong>203</strong></li>
-                    <li >Followers <strong>11</strong></li>
-                    <li >Following <strong>12</strong></li>
+                    <li>Items <strong>{{ profile_details.created_items }}</strong></li>
+                    <li >Followers <strong>{{ profile_details.followers }}</strong></li>
+                    <li >Following <strong>{{ profile_details.following }}</strong></li>
                 </ul>
             </div>
         </div>
