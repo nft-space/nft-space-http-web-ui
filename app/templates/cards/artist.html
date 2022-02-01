@@ -1,7 +1,7 @@
 <div class="cards--artist--main-container">
     <div class="cards--artist--header">
         <img 
-            src="{{ url_for('static', filename='/png/card__artist__background.png') }}"
+            src="{{ artist.background_src }}"
             alt="artist card background"
         >
         <div class="cards--artist--follow-container">
@@ -13,12 +13,12 @@
     </div>
     <div class="cards--artist--photo-container">
         <img 
-            src="{{ url_for('static', filename='/png/nft_example.png') }}"
-            alt="astro nft"
+            src="{{ artist.src }}"
+            alt="artist user photo"
         > 
     </div> 
     <div class="cards--artist--content-container">
-        Artist name
+        {{ artist.artist_name}}
     </div>
     
 </div>
