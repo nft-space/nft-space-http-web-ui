@@ -7,27 +7,25 @@
     margin: 1em;
 }
 
-.cards--artist--header{
+.cards--artist--image-header{
     width: 253px;
     height: 135px;
-    background: linear-gradient(87.77deg, #3F1A7B 24.51%, #FD4CAC 155.9%);
     border-radius: 8px;
     display: flex;
     margin: 8px;
+    position: relative;
+    top: 8px;
+    object-fit: cover;
 }
 
-.cards--artist--header>img{
-    width: 100%;
-    height: auto;
-    margin: 0px auto;
-}
 
 .cards--artist--follow-container{
     width: 40px;
     height: 40px;
     position: relative;
-    right: 3em;
-    top: 1em;
+    bottom: 7.5rem;
+    margin: auto;
+    left: 6rem;
 }
 
 .cards--artist--photo-container{
@@ -39,7 +37,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    bottom: 44px;
+    bottom: 80px;
     margin: auto;
 }
 
@@ -50,7 +48,6 @@
 }
 
 .cards--artist--content-container{
-    /* FONTS */
     font-family: system-ui;
     font-style: normal;
     font-weight: bold;
@@ -60,7 +57,7 @@
     color: #000000;
     text-align: center;
     position: relative;
-    bottom: 36px;
+    bottom: 70px;
 }
 
 

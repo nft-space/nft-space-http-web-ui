@@ -16,7 +16,6 @@ def render_details(nft_id):
     artist_details = json.loads(requests.get(f'{db_host}/profile/{artist_address}').content)
     owner_details = json.loads(requests.get(f'{db_host}/profile/{owner_address}').content)
     is_listed = json.loads(requests.get(f'https://www.randswap.com/v1/nft-offers/{nft_id}').content)
-    print('HHHHHHH', is_listed)
 
     return render_template(
         "details.html",
