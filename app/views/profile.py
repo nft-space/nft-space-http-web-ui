@@ -13,7 +13,7 @@ def render_profile(artist_address):
         requests.get(f'{db_host}/profile/{artist_address}').content
     )
     created_nft_list = verify_request(
-        requests.get(f'{db_host}/nfts/{artist_address}/created?count=10&order_by=latest')
+        requests.get(f'{db_host}/nfts/{artist_address}/created?count=12&order_by=latest')
     )
     
     return render_template(

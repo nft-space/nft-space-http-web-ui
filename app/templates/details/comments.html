@@ -1,8 +1,34 @@
 <div class="details--comments--main-container">
     <h1>Comments</h1>
     <!-- COMMENTS CONTENT -->
-    {% include 'details/comment-item.html' %}
-    {% include 'details/comment-item.html' %}
+    <!-- COMMENT 1 -->
+        <div class="details--comment-item--wrapper">
+            <div class="details--comment-item--photo-container">
+                <img 
+                    src="{{ url_for('static', filename='/png/empty_user.png') }}"
+                    alt="interactions follow button"
+                >
+            </div>
+            <div class="details--comment-item--text">
+                <p>
+                  I love this NFT! I really hope you can make some more, I have been following your work since December! :D  
+                </p>
+            </div>
+        </div>
+    <!-- COMMENT 2 -->
+        <div class="details--comment-item--wrapper">
+            <div class="details--comment-item--photo-container">
+                <img 
+                    src="{{ url_for('static', filename='/png/empty_user.png') }}"
+                    alt="interactions follow button"
+                >
+            </div>
+            <div class="details--comment-item--text">
+                <p>
+                    The NFT Space team loves this NFT!
+                </p>
+            </div>
+        </div>
     <!-- COMMENTS FORM -->
     <div class="comments--form-wrapper">
         <input class="comments--input" type="text" placeholder="Leave a comment">

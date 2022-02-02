@@ -1,17 +1,17 @@
 <a href="/profile/{{ artist.artist_address}}">
     <div class="cards--artist--main-container">
-        <div class="cards--artist--header">
+        <img 
+            class="cards--artist--image-header"
+            src="{{ artist.background_src }}"
+            alt="artist card background"
+        >
+        <div class="cards--artist--follow-container">
             <img 
-                src="{{ artist.background_src }}"
-                alt="artist card background"
+                src="{{ url_for('static', filename='/png/interactions__follow_button.png') }}"
+                alt="interactions follow button"
             >
-            <div class="cards--artist--follow-container">
-                <img 
-                    src="{{ url_for('static', filename='/png/interactions__follow_button.png') }}"
-                    alt="interactions follow button"
-                >
-            </div>     
-        </div>
+        </div>     
+
         <div class="cards--artist--photo-container">
             <img 
                 src="{{ artist.src }}"

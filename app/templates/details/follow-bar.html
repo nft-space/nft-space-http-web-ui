@@ -9,7 +9,7 @@
     </a>
     <a href="/profile/{{ artist_details.artist_address }}">
         <div class="follow-bar--details-container">
-            <p>{% if artist_details.monikor %}{{ artist_details.monikor }}{% else %} Anonymous {% endif %}</p>
+            <p>{% if artist_details.moniker %}{{ artist_details.moniker }}{% else %} Anonymous {% endif %}</p>
             <div class="address-container">
                 {{ artist_details.artist_address | profile_name_truncated }}
             </div>

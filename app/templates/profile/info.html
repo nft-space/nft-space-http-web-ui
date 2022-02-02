@@ -14,15 +14,12 @@
         <div class="profile--info--bio-wrapper">
             <!-- Artist name -->
             <div class="profile--info--bio-name"> 
-                {% if profile_details.monikor %}{{ profile_details.monikor}}{% else %}Anonymous{% endif %}
+                {% if profile_details.moniker %}{{ profile_details.moniker}}{% else %}Anonymous{% endif %}
             </div>
             <!-- Address Button -->
             <button type="button" class="profile--info--bio-address-button">
                 {{ profile_details.artist_address | profile_name_truncated }}
             </button>
-            <div class="profile--info--bio-description">
-                {{ profile_details.user_bio }}  
-            </div>
             <!-- Artist connections  -->
             <div class="profile--info--bio-connections">
                 <ul class="nav">
@@ -30,6 +27,9 @@
                     <li >Followers <strong>{{ profile_details.followers }}</strong></li>
                     <li >Following <strong>{{ profile_details.following }}</strong></li>
                 </ul>
+            </div>
+            <div class="profile--info--bio-description">
+                {{ profile_details.user_bio }}  
             </div>
         </div>
 
