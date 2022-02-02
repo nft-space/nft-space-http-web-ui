@@ -4,4 +4,3 @@
 *migrations/
 *.tar
 app/db.NFTHub
-config.py
